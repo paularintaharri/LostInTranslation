@@ -1,4 +1,5 @@
 import {  } from 'react-router-dom';
+import './TranslatePage.css';
 import TranslatedCard from '../components/TranslatedCard';
 import TranslateForm from '../components/TranslateForm';
 import { setTranslationStorage } from '../utils/translationStorage';

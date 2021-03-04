@@ -1,11 +1,22 @@
+import { useState, useEffect } from 'react'; 
 
 function TranslatedCard(props){
     const { word } = props; //get the input word
-    let character = Array.from(word); //add characters to array
-    
+    const [characters, setCharacters] = useState([]);
+
+    useEffect(() => {
+        setCharacters([...word])
+    }, [word])
+
+    const signCharacters = characters.map((character, index) => 
+        <img key={index} className="img-fluid" src={`signs/${character}.png`} alt={character}/>
+    );
     return (
         <div className="translated-card">
-            <p>{ word }</p>
+            <ul>
+                {signCharacters}
+            </ul>
+
         </div>
     );
 };
