@@ -1,11 +1,13 @@
-import {  } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './TranslatePage.css';
 import TranslatedCard from '../components/TranslatedCard';
 import TranslateForm from '../components/TranslateForm';
 import { setTranslationStorage } from '../utils/translationStorage';
+import { getUserStorage } from '../utils/userStorage';
 import { useState } from "react";
 
 function TranslatePage(){
+    const user = getUserStorage('ra_session');
     const [translateWord, setTranslateWord] = useState("");
 
     function handleTranslate(word){
@@ -15,10 +17,10 @@ function TranslatePage(){
 
     return (
         <div>
+             { !user && <Redirect to="/login" />}
             <p>translate page</p>
             <TranslateForm onClick={ handleTranslate }/>
             <TranslatedCard word={ translateWord }/>
-            
         </div>
     );
 };

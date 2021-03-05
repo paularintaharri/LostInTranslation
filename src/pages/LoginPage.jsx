@@ -3,7 +3,6 @@ import LoginForm from '../components/LoginForm';
 import { setUserStorage, getUserStorage } from '../utils/userStorage';
 
 function LoginPage(){
-
     const history = useHistory();
     const user = getUserStorage('ra_session');
 

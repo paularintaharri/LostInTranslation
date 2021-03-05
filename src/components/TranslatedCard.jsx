@@ -11,6 +11,7 @@ function TranslatedCard(props){
     const signCharacters = characters.map((character, index) => 
         <img key={index} className="img-fluid" src={`signs/${character}.png`} alt={character}/>
     );
+
     return (
         <div className="translated-card">
             <ul>

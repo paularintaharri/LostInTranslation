@@ -15,5 +15,5 @@ export const getTranslationStorage = () => {
 }
 
 export const cleareTranslationStorage = () => {
-    localStorage.clear("list");
+    localStorage.removeItem("list");
 }
