@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        Lost in Translation
+        
         <Switch>
             <Route path="/login" component={ LoginPage } />
             <Route path="/translate" component={ TranslatePage } />

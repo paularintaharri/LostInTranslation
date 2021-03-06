@@ -16,8 +16,8 @@ function ProfileButton(){
 
     return (
         <div className="profile-buttons">
-            <button onClick={cleareTranslationHistory}>Cleare history</button>
-            <button onClick={cleareUserHistory}>Log out</button>
+            <button onClick= {cleareTranslationHistory}></button>
+            <button onClick= {cleareUserHistory}></button>
         </div>
     );
 };

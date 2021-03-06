@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; 
 
 function TranslatedCard(props){
-    const { word } = props; //get the input word
+    const { word } = props;
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
@@ -16,6 +16,7 @@ function TranslatedCard(props){
         <div className="translated-card">
             <ul>
                 {signCharacters}
+                <p>{word}</p>
             </ul>
 
         </div>
