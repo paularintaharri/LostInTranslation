@@ -1,22 +1,36 @@
 # Lost in Translations App
 
-Lost in Translation is a web application made with React Framework and React-bootstrap.
+## Table of contents
+  - [About](#about)
+      - [Login page](#login-page)
+      - [Translation page](#translation-page)
+      - [Profile page](#profile-page)
+  - [Getting Started with Create React App](#getting-started-with-create-react-app)
+    - [Available Scripts](#available-scripts)
+      - [npm start](#npm-start)
+      - [npm test](#npm-test)
+      - [npm run build](#npm-run-build)
+      - [npm run ejec](#npm-run-eject)
 
-Main feature of the application is to translate English words and short sentences to American sign language.
+## About
 
-Application has three main views, Login page, Translation page and Profile page.
+Lost in Translation is a web application made with React Framework and React-bootstrap. Main feature of the application is to translate English words and short sentences to American sign language. Application has three main views, Login page, Translation page and Profile page.
 
 ## Login page
 
 Login page is the first thing that the user will see. View includes an input field where users must add their name or some other user name. App will store it to the local storage. After the valid user name is added and the submit button clicked, the user will be redirected to translation view.
+![image oh the login page](https://github.com/paularintaharri/LostInTranslation/blob/master/public/readme-images/loginpage.png)
 
 ## Translation page
 
 On the translation page users can type a word or short sentence to the input field. After the translate-button is clicked, translated words will appear under the button.
+![image oh the translation page](https://github.com/paularintaharri/LostInTranslation/blob/master/public/readme-images/translate_page.png)
 
 ## Profile page
 
 From the navigation bar, the user can navigate to the Profile page. On Profile view users can see the translation history. History includes max 10 latest inputted translations. On the profile view user can also clear the translation history or log out, when translation and user history will be removed and the user will be redirected to the login page. 
+![image oh the profile page](https://github.com/paularintaharri/LostInTranslation/blob/master/public/readme-images/profile_page.png)
+
 
 ## Getting Started with Create React App
 
