@@ -11,9 +11,9 @@ function TranslatePage(){
     const user = getUserStorage('ra_session');
     const [translateWord, setTranslateWord] = useState("");
 
-    function handleTranslate(word){
+    function handleTranslate(word){ 
         setTranslationStorage(word); //add the translation to localStorage
-        setTranslateWord(word);
+        setTranslateWord(word); //add the translation to translatetWord state
     }
 
     return (

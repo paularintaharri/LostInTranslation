@@ -7,7 +7,7 @@ function LoginPage(){
     const history = useHistory();
     const user = getUserStorage('ra_session');
 
-    function handleLoginComplete(username){
+    function handleLoginComplete(username){ //set user session to localStore and redirect to translate page
         setUserStorage ('ra_session', {
             session: { username }
         });

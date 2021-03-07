@@ -6,7 +6,7 @@ function TranslateForm(props){
     const [word, setWord] = useState("");
     const toolTipText = "Word length must be 1-40 characters and it must not include spesial characters";
     
-    function validateForm() {
+    function validateForm() { //validate form 
         let formIsValid = true;
         if (word.length > 0 && word.length < 40 && word.match(/^[A-Za-z ]+$/)){
             formIsValid = true;
@@ -16,12 +16,12 @@ function TranslateForm(props){
         return formIsValid;
     };
 
-    function onSubmitClicked(e){
+    function onSubmitClicked(e){ //set inpput word to props and clear input field
         props.onClick(word.toLocaleLowerCase())
         setWord("");
     };
 
-    function onWordChanged(e){
+    function onWordChanged(e){ //set word to state
         setWord(e.target.value);
     }
 

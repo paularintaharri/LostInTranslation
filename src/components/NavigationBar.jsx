@@ -11,24 +11,23 @@ function NavigationBar(){
     const user = getUserStorage('ra_session');
 
     useEffect(() => {
-        if(user){
+        if(user){ //check if user is logged in
             setUserLoggedIn(true);
         }
     }, [user])
 
-    function cleareUserHistory(){
+    function cleareUserHistory(){ //cleare localStore user history and set userLogged in to false
         cleareUserStorage(getUserStorage('ra_session'));
         setUserLoggedIn(false);
-        history.replace("/login");
+        history.replace("/login"); //redirect to login page
     }
 
     return (
         <div>
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Navbar.Brand>Lost In Translation</Navbar.Brand>
-                { !userLoggedIn ? 
-                    <Redirect to="/login" />
-                    :
+                { !userLoggedIn ?  //if user is not logged in, redirect to login page
+                    <Redirect to="/login" /> : //if user is logged in show navigation
                     <Nav className="navbar-expand justify-content-end">
                         <Nav.Item className="navbar-nav nav-link"><Nav.Link href="/translate">Translate</Nav.Link></Nav.Item>
                         <Nav.Item className="navbar-nav nav-link"><Nav.Link href="/profile">Profile</Nav.Link></Nav.Item>

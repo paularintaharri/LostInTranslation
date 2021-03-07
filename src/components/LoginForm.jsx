@@ -4,15 +4,15 @@ import { Form, Button } from "react-bootstrap";
 function LoginForm(props){
     const [name, setName] = useState("");
 
-    function validateForm() {
+    function validateForm() { //validate user input
         return name.length > 0;
     };
 
-    function onSubmitClicked(e){
+    function onSubmitClicked(e){ //set name to props
         props.onClick(name)
     };
 
-    function onNameChanged(e){
+    function onNameChanged(e){ //set input username to name state
         setName(e.target.value.trim());
     }
 

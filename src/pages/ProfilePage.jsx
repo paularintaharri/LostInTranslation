@@ -12,15 +12,15 @@ function ProfilePage(){
     const history = useHistory();  
     const [translationsList, setTranslationsList] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => { //set localStore translations to translationList state
         setTranslationsList(getTranslationStorage());
     }, [])
 
-    function cleareTranslationHistory(){
+    function cleareTranslationHistory(){ //cleare translation from localStore 
         setTranslationsList(cleareTranslationStorage());  
     }
 
-    function cleareUserHistory(){
+    function cleareUserHistory(){ //cleare localStore user and translation lists
         cleareUserStorage();
         history.replace("/login");
     }
