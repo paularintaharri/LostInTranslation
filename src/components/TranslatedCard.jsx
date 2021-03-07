@@ -18,7 +18,6 @@ function TranslatedCard(props){
                 {signCharacters}
                 <p>{word}</p>
             </ul>
-
         </div>
     );
 };

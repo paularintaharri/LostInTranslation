@@ -28,12 +28,13 @@ function TranslateForm(props){
     return (
         <Form>
             <ReactTooltip />
-            <div>
-                <input data-tip={toolTipText} autoFocus type="text" placeholder="What you want to translate?" value={word} onChange={ onWordChanged } />
-            </div>
-            <div>
-                <Button  type="button" block size="lg" disabled={ !validateForm() } onClick={ onSubmitClicked }>Submit</Button>
-            </div>
+            <Form.Group>
+                <Form.Label className="label-text">Write the word to translate</Form.Label>
+            </Form.Group>
+            <Form.Group>
+                <Form.Control className="translate-form" autoFocus data-tip={toolTipText} type="text" placeholder="What you want to translate?" value={word} onChange={ onWordChanged }/>
+            </Form.Group>
+            <Button className="button-green" variant="info" type="button" disabled={ !validateForm() } onClick={ onSubmitClicked }>Translate</Button>
         </Form>
     );
 };

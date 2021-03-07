@@ -1,3 +1,4 @@
+import './LoginPage.css';
 import { Redirect, useHistory } from 'react-router-dom';
 import LoginForm from '../components/LoginForm';
 import { setUserStorage, getUserStorage } from '../utils/userStorage';

@@ -1,7 +1,16 @@
-
 .header {
-    background: rgb(114, 153, 226);
+    background: #212529;
     padding: 3em;
     margin-bottom: 1em;
-  }
-  
+}
+h1 {
+  color: rgb(255, 255, 255);
+}
+.form-label {
+  color: rgb(255, 255, 255);
+}
+.login-form {
+  width: 10em !important;
+  vertical-align: middle;
+  display: inline-block !important;
+}

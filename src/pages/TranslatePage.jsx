@@ -21,12 +21,11 @@ function TranslatePage(){
             <NavigationBar />
             <div>
                 { !user && <Redirect to="/login" />}
-                <p>translate page</p>
+                <h2>Translate word and sentences</h2>
                 <TranslateForm onClick={ handleTranslate }/>
                 <TranslatedCard word={ translateWord }/>
             </div>
-        </div>
-        
+        </div>  
     );
 };
 

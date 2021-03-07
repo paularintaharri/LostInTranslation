@@ -2,7 +2,8 @@ import { Redirect } from 'react-router-dom';
 import { useState, useEffect} from "react";
 import { getUserStorage, cleareUserStorage } from '../utils/userStorage';
 import { useHistory } from 'react-router-dom';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavigationBar(){
     const history = useHistory();  
@@ -22,19 +23,19 @@ function NavigationBar(){
     }
 
     return (
-        <Navbar expand="lg">
-            <Navbar.Brand>Lost In Translation</Navbar.Brand>
-            <Navbar.Collapse id="basic-navbar-nav">
-            { !userLoggedIn ? 
-                <Redirect to="/login" />
-                :
-                <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="/translate">Translate</Nav.Link></Nav.Item> 
-                    <Nav.Item><Nav.Link href="/profile">Profile</Nav.Link></Nav.Item>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" onClick= {cleareUserHistory}>Log Out</Navbar.Toggle>
-                </Nav>  }
-            </Navbar.Collapse>
-        </Navbar>
+        <div>
+            <Navbar bg="dark" variant="dark" expand="lg">
+                <Navbar.Brand>Lost In Translation</Navbar.Brand>
+                { !userLoggedIn ? 
+                    <Redirect to="/login" />
+                    :
+                    <Nav className="navbar-expand justify-content-end">
+                        <Nav.Item className="navbar-nav nav-link"><Nav.Link href="/translate">Translate</Nav.Link></Nav.Item>
+                        <Nav.Item className="navbar-nav nav-link"><Nav.Link href="/profile">Profile</Nav.Link></Nav.Item>
+                        <Nav.Item className="navbar-nav nav-link navbar-brand"><Button variant="outline-light" aria-controls="basic-navbar-nav" onClick= {cleareUserHistory}>Log Out</Button></Nav.Item>
+                    </Nav>  }
+            </Navbar>
+        </div>
     );
 };
 

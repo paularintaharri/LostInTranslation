@@ -5,6 +5,7 @@ import { getUserStorage, cleareUserStorage } from '../utils/userStorage';
 import { cleareTranslationStorage, getTranslationStorage } from '../utils/translationStorage';
 import { useHistory } from 'react-router-dom';
 import { useState, useEffect} from "react";
+import { Button, Table } from "react-bootstrap";
 
 function ProfilePage(){
     const user = getUserStorage('ra_session');
@@ -27,16 +28,17 @@ function ProfilePage(){
     return (
         <div>
         <NavigationBar />
-            <div>
+            <div >
                 { !user && <Redirect to="/login" />}
-                <p>Profile page. Username: {user.session.username}</p>
-                <button onClick= {cleareTranslationHistory}>Cleare history</button>
-                <button onClick= {cleareUserHistory}>Log Out</button>
-                <table>
+                <h2>Profile page</h2>
+                <h3>Search history for user: {user.session.username}</h3>
+                <Button className="button-green" variant="info" onClick= {cleareTranslationHistory}>Cleare history</Button>
+                <Button className="button-green" variant="info" onClick= {cleareUserHistory}>Log Out</Button>
+                <Table>
                     <tbody>
                         <ProfileCard translationsList={translationsList}/>
                     </tbody>
-                </table>
+                </Table>
             </div>
         </div> 
     );

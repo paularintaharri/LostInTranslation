@@ -18,12 +18,13 @@ function LoginForm(props){
 
     return (
         <Form>
-            <div>
-                <input autoFocus type="text" placeholder="What's your name?" value={name} onChange={ onNameChanged } />
-            </div>
-            <div>
-                <Button type="button" block size="lg" disabled={ !validateForm() } onClick={ onSubmitClicked }>Submit</Button>
-            </div>
+             <Form.Group>
+                <Form.Label>Username</Form.Label>
+            </Form.Group>
+            <Form.Group>
+                <Form.Control className="login-form" autoFocus type="username" placeholder="What's your name?"  value={name} onChange={ onNameChanged }/>
+            </Form.Group>
+            <Button className="button-green" variant="info" type="button" disabled={ !validateForm() } onClick={ onSubmitClicked }>Submit</Button>
         </Form>
     );
 };

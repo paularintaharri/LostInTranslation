@@ -1,4 +1,13 @@
+.label-text{
+    color:black;
+}
+
+.translate-form {
+    width: 25em !important;
+    vertical-align: middle;
+    display: inline-block !important;
+}
+
 .img-fluid{
-    width: 70px;
-    height: 70px;
+    width: 4em;
 }
