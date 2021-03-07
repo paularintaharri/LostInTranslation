@@ -15,6 +15,7 @@
 ## About
 
 Lost in Translation is a web application made with React Framework and React-bootstrap. Main feature of the application is to translate English words and short sentences to American sign language. Application has three main views, Login page, Translation page and Profile page.
+Link to app: https://lost-in-translations-paula.herokuapp.com/login
 
 ## Login page
 
