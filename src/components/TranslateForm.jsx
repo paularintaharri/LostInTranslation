@@ -34,7 +34,7 @@ function TranslateForm(props){
             <Form.Group>
                 <Form.Control className="translate-form" autoFocus data-tip={toolTipText} type="text" placeholder="What you want to translate?" value={word} onChange={ onWordChanged }/>
             </Form.Group>
-            <Button className="button-green" variant="info" type="button" disabled={ !validateForm() } onClick={ onSubmitClicked }>Translate</Button>
+            <Button className="button-green" variant="info" type="submit" disabled={ !validateForm() } onClick={ onSubmitClicked }>Translate</Button>
         </Form>
     );
 };

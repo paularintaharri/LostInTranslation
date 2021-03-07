@@ -24,7 +24,7 @@ function LoginForm(props){
             <Form.Group>
                 <Form.Control className="login-form" autoFocus type="username" placeholder="What's your name?"  value={name} onChange={ onNameChanged }/>
             </Form.Group>
-            <Button className="button-green" variant="info" type="button" disabled={ !validateForm() } onClick={ onSubmitClicked }>Submit</Button>
+            <Button className="button-green" variant="info" type="submit" disabled={ !validateForm() } onClick={ onSubmitClicked }>Submit</Button>
         </Form>
     );
 };
