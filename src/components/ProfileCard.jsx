@@ -11,7 +11,7 @@ class ProfileCard extends React.Component {
                 </tr>
                 ))
             ) 
-        } return (<p>No traslations on the list</p>)
+        } return (<p>No translations</p>)
     }      
 };
 

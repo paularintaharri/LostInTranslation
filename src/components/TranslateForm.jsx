@@ -29,7 +29,7 @@ function TranslateForm(props){
         <Form>
             <ReactTooltip />
             <Form.Group>
-                <Form.Label className="label-text">Write the word to translate</Form.Label>
+                <Form.Label className="label-text">Write the word</Form.Label>
             </Form.Group>
             <Form.Group>
                 <Form.Control className="translate-form" autoFocus data-tip={toolTipText} type="text" placeholder="What you want to translate?" value={word} onChange={ onWordChanged }/>
