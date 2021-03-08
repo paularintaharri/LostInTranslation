@@ -20,7 +20,7 @@ Link to app: https://lost-in-translations-paula.herokuapp.com/login
 
 ## Login page
 
-Login page is the first thing that the user will see. View includes an input field where users must add their name or some other user name. App will store it to the local storage. After the valid user name is added and the submit button clicked, the user will be redirected to translation view.
+Login page is the first thing that the user will see. View includes an input field where users must add their name or some other username. App will store it to the local storage. After the valid username is added and the submit-button clicked, the user will be redirected to translation view.
 
 ![image oh the login page](https://github.com/paularintaharri/LostInTranslation/blob/master/public/readme-images/loginpage.png)
 
@@ -32,7 +32,7 @@ On the translation page users can type a word or short sentence to the input fie
 
 ## Profile page
 
-From the navigation bar, the user can navigate to the Profile page. On Profile view users can see the translation history. History includes max 10 latest inputted translations. On the profile view user can also clear the translation history or log out, when translation and user history will be removed and the user will be redirected to the login page. 
+From the navigation bar, the user can navigate to the Profile page. On the Profile view users can see the translation history. History includes max 10 latest inputted translations. On the profile view user can also clear the translation history or log out, when translation and user history will be removed and the user will be redirected to the login page. 
 
 ![image oh the profile page](https://github.com/paularintaharri/LostInTranslation/blob/master/public/readme-images/profile_page.png)
 
